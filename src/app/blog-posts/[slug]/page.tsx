@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import type * as React from "react"
 
 import { getBlogPostSlugs, getBlogPostBySlug } from "@/lib/blog-posts"
+import { ClientDiv } from "@/components/client-div"
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -19,17 +20,19 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   const BlogPostContent = blogPost.content
 
   return (
-    <main className="min-h-full flex flex-col justify-center text-3xl">
-      <h1>Site Title</h1>
-      <article>
-        <h2>{blogPost.title}</h2>
-        <p>Date: {blogPost.date.toISOString()}</p>
-        
-        <div>
-          <BlogPostContent />
-        </div>
-      </article>
-    </main>
+    <ClientDiv>
+      <main className="min-h-full flex flex-col justify-center text-3xl">
+        <h1>Site Title</h1>
+        <article>
+          <h2>{blogPost.title}</h2>
+          <p>Date: {blogPost.date.toISOString()}</p>
+          
+          <div>
+            <BlogPostContent />
+          </div>
+        </article>
+      </main>
+    </ClientDiv>
   )
 }
 
