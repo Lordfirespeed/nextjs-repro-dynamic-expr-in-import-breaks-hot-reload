@@ -1,0 +1,56 @@
+# Exclude everything
+/*
+
+# Specific includes
+
+## Monorepo subpackages
+!/client
+/client/*
+
+## Editorconfig
+!.editorconfig
+
+## Package manager
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!.npmignore
+!.npmrc
+
+## Config files
+!*config*.ts
+!*config*.[cm]ts
+!*config*.js
+!*config*.[cm]js
+!*config*.json
+!*rc.json
+
+## Biome.js
+!biome.json
+!/biome-base.json
+
+## Husky
+!.husky
+
+## Markdowns
+!*.md
+!LICENSE
+!licenses
+
+## important Git files
+!.gitmodules
+!.gitignore
+!.gitattributes
+!.git-blame-ignore-revs
+
+## GitHub specific
+!/.github/
+
+## Sources
+!src
+!public
+
+# Explicit exceptions/ignores
+
+## next-env.d.ts is auto-generated
+next-env.d.ts
