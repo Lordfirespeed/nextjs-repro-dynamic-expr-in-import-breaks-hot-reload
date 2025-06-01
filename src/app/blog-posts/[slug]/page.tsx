@@ -19,13 +19,13 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   const BlogPostContent = blogPost.content
 
   return (
-    <main className="container py-6 lg:py-8">
+    <main className="min-h-full flex flex-col justify-center text-3xl">
       <h1>Site Title</h1>
-      <article className="mb-32">
+      <article>
         <h2>{blogPost.title}</h2>
         <p>Date: {blogPost.date.toISOString()}</p>
         
-        <div className="max-w-2xl mx-auto text-lg space-y-6">
+        <div>
           <BlogPostContent />
         </div>
       </article>
